@@ -42,12 +42,12 @@ class Page(HTMLParser):
 home = Page((ROOT / 'index.html').read_text(encoding='utf-8'))
 source = (ROOT / 'about/index.html').read_text(encoding='utf-8')
 about = Page(source)
-assert 'about/index.html' in home.links
+assert '/about/' in home.links
 for href in about.links:
     if href and not href.startswith(('http:', 'https:', '#')):
         assert (ROOT / 'about' / href).resolve().exists(), href
 assert NAME in ''.join(about.text) and 'founder and owner' in ''.join(about.text)
-assert about.canonical == [BASE + '/about']
+assert about.canonical == [BASE + '/about/']
 assert home.canonical == [BASE + '/']
 assert all('noindex' not in value and 'none' not in value for value in about.robots)
 robots = (ROOT / 'robots.txt').read_text()
@@ -55,7 +55,7 @@ assert 'Disallow:' not in robots
 assert 'Sitemap: ' + BASE + '/sitemap.xml' in robots
 sitemap = ET.parse(ROOT / 'sitemap.xml')
 urls = [node.text for node in sitemap.findall('.//{*}loc')]
-assert BASE + '/about' in urls
+assert BASE + '/about/' in urls
 assert len(urls) == len(set(urls)) == 5
 schema = json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>', source, re.S).group(1))
 person, org = schema['@graph']
