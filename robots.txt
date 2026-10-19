@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://miawlabs.web.id/sitemap.xml

@@ -197,3 +197,14 @@ Use the repository root as the publish directory. No deployment-time build comma
 Built with [Three.js](https://threejs.org/) and [anime.js](https://animejs.com/). Their MIT license notices are preserved in `assets/vendor/` and the generated bundle.
 
 Copyright &copy; 2026 MiawLabs. All rights reserved for original project content. Third-party dependencies retain their own licenses. This repository currently provides no separate license grant for original code or assets.
+
+## Maintainer
+
+**Sulistyo Fajar Pratama** is the founder and owner of MiawLabs.
+GitHub: [skutanjir](https://github.com/skutanjir). npm publisher: [miaws](https://www.npmjs.com/~miaws).
+Official identity page: [About MiawLabs](https://miawlabs.web.id/about).
+Contact: [project issues](https://github.com/skutanjir/miawlabs/issues). Email addresses are intentionally omitted from public website source and metadata.
+
+### Discoverability checks
+
+Run `python tests/verify-discoverability.py`. See `docs/discoverability-audit.md` for live audit findings, deployment checks and npm metadata follow-up.

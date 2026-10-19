@@ -1,0 +1,23 @@
+{
+  "name": "miawlabs",
+  "private": true,
+  "description": "MiawLabs website and local AI toolchain documentation",
+  "homepage": "https://miawlabs.web.id/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skutanjir/miawlabs.git"
+  },
+  "author": {
+    "name": "Sulistyo Fajar Pratama",
+    "url": "https://github.com/skutanjir"
+  },
+  "maintainers": [
+    {
+      "name": "Sulistyo Fajar Pratama",
+      "url": "https://github.com/skutanjir"
+    }
+  ],
+  "scripts": {
+    "test:seo": "python tests/verify-discoverability.py"
+  }
+}

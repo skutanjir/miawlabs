@@ -1,0 +1,24 @@
+--- a/package.json
++++ b/package.json
+@@ -1,4 +1,9 @@
+ {
++  "author": { "name": "Sulistyo Fajar Pratama", "url": "https://github.com/skutanjir" },
++  "maintainers": [{ "name": "Sulistyo Fajar Pratama", "url": "https://github.com/skutanjir" }],
++  "homepage": "https://miawlabs.web.id/",
++  "repository": { "type": "git", "url": "https://github.com/skutanjir/miawrouter.git" },
++  "bugs": { "url": "https://github.com/skutanjir/miawrouter/issues" },
+   "name": "miawrouter",
+   "version": "1.2.3",
+   "description": "MiawRouter web dashboard",
+--- a/cli/package.json
++++ b/cli/package.json
+@@ -1,4 +1,9 @@
+ {
++  "author": { "name": "Sulistyo Fajar Pratama", "url": "https://github.com/skutanjir" },
++  "maintainers": [{ "name": "Sulistyo Fajar Pratama", "url": "https://github.com/skutanjir" }],
++  "homepage": "https://miawlabs.web.id/",
++  "repository": { "type": "git", "url": "https://github.com/skutanjir/miawrouter.git" },
++  "bugs": { "url": "https://github.com/skutanjir/miawrouter/issues" },
+   "name": "miawrouter",
+   "version": "1.2.3",
+   "description": "MiawRouter CLI - Start and manage MiawRouter server",

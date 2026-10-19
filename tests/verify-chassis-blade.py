@@ -89,7 +89,7 @@ def check_page(rel, path, required_fragments, errors):
     for target in parser.links:
         if target.startswith(("http://", "https://", "mailto:", "#")):
             continue
-        resolved = (path.parent / target.split("#", 1)[0]).resolve()
+        resolved = ((ROOT / target.lstrip("/")) if target.startswith("/") else (path.parent / target.split("#", 1)[0])).resolve()
         if not resolved.exists():
             errors.append(f"Broken relative link in {rel}: {target}")
 
