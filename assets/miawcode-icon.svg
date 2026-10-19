@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">MiawCode</title>
+  <desc id="desc">Soft 3D navy tile with pink code brackets and a cyan slash.</desc>
+  <defs>
+    <linearGradient id="tile" x1="72" y1="38" x2="442" y2="490" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#263a62"/>
+      <stop offset="1" stop-color="#0b1730"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="80" y1="398" x2="430" y2="470" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#182d52"/>
+      <stop offset="1" stop-color="#071127"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#061029" flood-opacity=".5"/>
+    </filter>
+  </defs>
+  <rect x="31" y="39" width="450" height="434" rx="104" fill="#071127" opacity=".8" filter="url(#shadow)"/>
+  <rect x="24" y="24" width="464" height="464" rx="112" fill="url(#tile)"/>
+  <path d="M24 388c115 47 314 54 464-4v104H24Z" fill="url(#edge)" opacity=".9"/>
+  <path d="M82 112c75-59 244-74 337-6" fill="none" stroke="#fff" stroke-opacity=".11" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="108" cy="104" r="10" fill="#f02f93" opacity=".9"/>
+  <circle cx="143" cy="104" r="10" fill="#22d3ee" opacity=".9"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="31">
+    <path d="m202 176-82 80 82 80" stroke="#f02f93"/>
+    <path d="m310 176 82 80-82 80" stroke="#f02f93"/>
+    <path d="m286 156-60 200" stroke="#22d3ee"/>
+  </g>
+  <path d="M90 404h332" stroke="#fff" stroke-opacity=".12" stroke-width="4" stroke-linecap="round"/>
+</svg>

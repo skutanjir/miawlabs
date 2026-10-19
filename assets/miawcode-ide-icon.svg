@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">MiawCode IDE</title>
+  <desc id="desc">A mint cat-shaped code window on a flat midnight tile.</desc>
+  <defs>
+    <linearGradient id="tile" x1="96" y1="24" x2="408" y2="488" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#16303b"/>
+      <stop offset="1" stop-color="#0a161c"/>
+    </linearGradient>
+    <linearGradient id="head" x1="140" y1="120" x2="380" y2="400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8ff0e2"/>
+      <stop offset="1" stop-color="#34c4b0"/>
+    </linearGradient>
+  </defs>
+  <rect x="24" y="24" width="464" height="464" rx="112" fill="url(#tile)"/>
+  <rect x="25.5" y="25.5" width="461" height="461" rx="110.5" fill="none" stroke="#fff" stroke-opacity=".08" stroke-width="3"/>
+  <path d="M104 356V128q0-14 12-6l72 54q68-20 136 0l72-54q12-8 12 6v228q0 40-40 40H144q-40 0-40-40Z" fill="url(#head)"/>
+  <path d="m129 153 40 30-40 12Zm254 0-40 30 40 12Z" fill="#0f2a33" fill-opacity=".55"/>
+  <rect x="134" y="222" width="244" height="146" rx="26" fill="#0f1b23"/>
+  <g fill="none" stroke-width="22" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m204 266-32 29 32 29M308 266l32 29-32 29" stroke="#eef6f4"/>
+    <path d="m272 256-32 78" stroke="#6ee0d0"/>
+  </g>
+</svg>

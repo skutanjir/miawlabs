@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MiawCode: Terminal Coding Agent</title>
+  <meta name="description" content="Local-first terminal coding agent built with Bun, Go, and Rust.">
+  <link rel="icon" type="image/svg+xml" href="../assets/miawcode-icon.svg">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="product-code">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="../index.html" class="brand-link" aria-label="MiawLabs home">
+        <img src="../assets/miawcode-icon.svg" alt="" class="brand-badge-img" width="34" height="34">
+        <span>Miaw<strong>Code</strong><span class="brand-tagline">Terminal coding agent</span></span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="../index.html" class="nav-link">Overview</a>
+        <a href="../router/index.html" class="nav-link">MiawRouter</a>
+        <a href="index.html" class="nav-link active" aria-current="page">MiawCode</a>
+        <a href="../ide/index.html" class="nav-link">MiawCode IDE</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="page-main">
+    <section class="page-hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow">Terminal agent / Rust, Go, Bun</div>
+        <h1 id="hero-title">Code with a <em>local-first agent.</em></h1>
+        <p class="hero-lead">MiawCode keeps standard terminal scrollback while coordinating edits, commands, tools, providers, and subagents.</p>
+        <p class="hero-note">The runtime combines a Bun and TypeScript CLI, a Go provider daemon, and optional Rust native helpers.</p>
+        <div class="hero-actions">
+          <a href="#installation" class="btn btn-primary">Install MiawCode</a>
+          <a href="https://github.com/skutanjir/miawcode" class="btn" target="_blank" rel="noopener noreferrer">Open repository</a>
+          <a href="#tui" class="btn">Inspect TUI architecture</a>
+        </div>
+      </div>
+
+      <div class="hero-scene" aria-hidden="true">
+        <div class="scene-panel scene-panel-left scene-panel-code">
+          <img class="panel-icon" src="../assets/miawcode-icon.svg" alt="">
+          <strong>Interactive TUI</strong>
+          <small>scrollback preserved</small>
+        </div>
+        <div class="scene-panel scene-panel-right scene-panel-router">
+          <img class="panel-icon" src="../assets/miawrouter-mascot-router.png" alt="">
+          <strong>Provider daemon</strong>
+          <small>routing ready</small>
+        </div>
+        <div class="scene-panel scene-panel-bottom scene-panel-ide">
+          <img class="panel-icon" src="../assets/miawcode-ide-icon.svg" alt="">
+          <strong>PTY runner</strong>
+          <small>process attached</small>
+        </div>
+        <div class="scene-orbit"></div>
+        <div class="scene-dock"></div>
+        <img class="scene-mark" src="../assets/miawcode-icon.svg" alt="">
+      </div>
+    </section>
+
+    <section class="section-shell" id="installation" aria-labelledby="installation-title">
+      <div class="section-heading">
+        <div class="eyebrow">Installation / npm 0.1.3</div>
+        <h2 id="installation-title">Install the published CLI.</h2>
+        <p>The npm package installs both <code>miaw</code> and <code>miawcode</code> command names.</p>
+      </div>
+      <div class="content-grid">
+        <div class="code-panel" tabindex="0" role="region" aria-label="MiawCode installation commands">
+          <span class="code-label">Install and run</span>
+          <pre><code>npm install -g miawcode@0.1.3
+miawcode</code></pre>
+        </div>
+        <div class="code-panel" tabindex="0" role="region" aria-label="MiawCode contributor build commands">
+          <span class="code-label">Build from source</span>
+          <pre><code>git clone https://github.com/skutanjir/miawcode.git
+cd miawcode
+bun install
+bun run build
+./bin/miaw</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell" id="tui" aria-labelledby="tui-title">
+      <div class="architecture-band">
+        <div class="architecture-copy">
+          <div class="eyebrow">TUI architecture</div>
+          <h3 id="tui-title">Conversation above, controls below.</h3>
+          <p>The split-footer layout keeps transcript output in normal terminal scrollback. The input, status, effort, and mode controls stay docked at the bottom.</p>
+        </div>
+        <div class="code-panel" tabindex="0" role="region" aria-label="MiawCode terminal layout">
+          <span class="code-label">Terminal surface</span>
+          <pre><code>conversation transcript
+tool calls and command output
+────────────────────────
+mode · model · context
+prompt input
+key hints</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell" aria-labelledby="tools-title">
+      <div class="section-heading">
+        <div class="eyebrow">Tools and security</div>
+        <h2 id="tools-title">Native operations with recoverable edits.</h2>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card lead-feature">
+          <div class="product-label">Provider runtime</div>
+          <h3>Direct and gateway-backed model access</h3>
+          <p>The agent can connect directly to supported providers or route through MiawRouter on <code>127.0.0.1:21128</code>.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Anchored file patching</h3>
+          <p>Rust hashline anchors make edits fail when the target lines have changed instead of applying to the wrong location.</p>
+        </article>
+        <article class="feature-card">
+          <h3>MCP client and server</h3>
+          <p>MiawCode can consume local MCP tools and expose its own tools to another orchestrator.</p>
+        </article>
+        <article class="feature-card">
+          <h3>In-process exploration</h3>
+          <p>Native search and walking avoid repeated shell process startup for common repository reads.</p>
+        </article>
+        <article class="feature-card">
+          <h3>PTY execution</h3>
+          <p>Builds and long-running commands stream through an integrated pseudo-terminal.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Checkpoints and encrypted secrets</h3>
+          <p>File mutations create recoverable checkpoints. Credentials use AES-256-GCM storage with owner-only local files.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-shell" aria-labelledby="specs-title">
+      <div class="section-heading">
+        <div class="eyebrow">Specifications</div>
+        <h2 id="specs-title">A cross-platform agent runtime.</h2>
+      </div>
+      <div class="fact-table">
+        <div class="fact-row"><span class="fact-key">Architecture</span><span class="fact-val">Bun and TypeScript CLI, Go daemon, optional Rust helpers</span></div>
+        <div class="fact-row"><span class="fact-key">Providers</span><span class="fact-val">Direct provider adapters plus MiawRouter gateway support</span></div>
+        <div class="fact-row"><span class="fact-key">Tools</span><span class="fact-val">File edits, PTY, LSP, DAP, browser, web, databases, MCP, media, and GitHub</span></div>
+        <div class="fact-row"><span class="fact-key">Distribution</span><span class="fact-val">Source build and npm package workflow</span></div>
+        <div class="fact-row"><span class="fact-key">Requirements</span><span class="fact-val">Bun 1.3+, Go 1.24+, stable Rust for native helpers</span></div>
+        <div class="fact-row"><span class="fact-key">License</span><span class="fact-val">MIT</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div><strong>MiawCode</strong><br>Terminal coding agent</div>
+      <div class="footer-links">
+        <a href="../index.html">MiawLabs</a>
+        <a href="../router/index.html">MiawRouter</a>
+        <a href="../ide/index.html">MiawCode IDE</a>
+        <a href="https://github.com/skutanjir/miawcode" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

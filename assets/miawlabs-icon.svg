@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">MiawLabs</title>
+  <desc id="desc">Three folded paths form a precise M monogram. Graphite and chartreuse, with a feline ear silhouette.</desc>
+  <rect x="24" y="24" width="464" height="464" rx="104" fill="#20271f"/>
+  <path d="M104 360V136l104 92 48-44 48 44 104-92v224h-64V278l-40 36-48-44-48 44-40-36v82Z" fill="#e8e9e1"/>
+  <path d="m104 136 104 92 48-44 48 44 104-92v75l-104 92-48-44-48 44-104-92Z" fill="#d5f45a"/>
+  <path d="m104 136 64 57v75l-64-57Zm304 0-64 57v75l64-57Z" fill="#a4be47"/>
+  <path d="M222 370h68" stroke="#d5f45a" stroke-width="12"/>
+</svg>

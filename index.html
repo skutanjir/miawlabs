@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#e8e9e1">
+  <meta name="description" content="Your models. Your machine. MiawRouter, MiawCode and MiawCode IDE: a local AI developer toolchain.">
+  <meta property="og:title" content="MiawLabs / Intelligence, on your terms.">
+  <meta property="og:description" content="Route models. Build in your terminal. Bring agents into your editor.">
+  <meta property="og:type" content="website">
+  <title>MiawLabs / Intelligence, on your terms.</title>
+  <link rel="icon" href="assets/miawlabs-icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/landing.css">
+  <script defer src="assets/landing.bundle.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <main id="main-content">
+    <section class="hero-scene hero" aria-labelledby="hero-title">
+      <div class="masthead"><a class="wordmark" href="./" aria-label="MiawLabs home"><img src="assets/miawlabs-icon.svg" width="38" height="38" alt=""><span>miaw<span class="wordmark-light">labs</span></span></a><span class="edition">INDEPENDENT TOOLS FOR INDEPENDENT BUILDERS</span></div>
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> LOCAL AI. NO SINGLE WAY TO BUILD.</p>
+        <h1 id="hero-title">Intelligence,<br><span class="headline-line">on <em>your</em> terms</span><span class="period">.</span></h1>
+        <p class="hero-lead">Your models. Your machine. Your next big thing.<br>Three focused tools. One connected workflow.</p>
+        <a class="action action-dark" href="#install">Make it yours <span aria-hidden="true">↗</span></a>
+        <span class="hero-footnote">A local gateway. A terminal agent. An editor in the making.</span>
+      </div>
+      <div class="scene" id="scene">
+        <div class="scene-fallback" aria-hidden="true">
+          <div class="preview-module preview-ide"><img src="assets/miawcode-ide-icon.svg" alt=""><span>03 / WORKSPACE</span><strong>MiawCode IDE</strong></div>
+          <div class="preview-module preview-code"><img src="assets/miawcode-icon.svg" alt=""><span>02 / TERMINAL</span><strong>MiawCode</strong></div>
+          <div class="preview-module preview-router"><img src="assets/miawrouter-mascot-router.png" alt=""><span>01 / GATEWAY</span><strong>MiawRouter</strong></div>
+          <div class="preview-base"></div>
+        </div>
+        <canvas id="webgl" aria-label="Interactive 3D product assembly. Drag to rotate. Use the product buttons below to explore."></canvas>
+        <span class="scene-coordinate" aria-hidden="true">ML/001<br>LOCAL INTELLIGENCE UNIT</span>
+        <div class="scene-tools"><span id="scene-hint">Interactive scene / loading</span><button id="motion-toggle" type="button" aria-pressed="false" hidden>Pause motion</button><button id="reset-scene" type="button" hidden>Reset view</button></div>
+      </div>
+      <div class="product-selector" role="group" aria-label="Explore a product">
+        <button class="product-switch is-active" type="button" data-product="router" aria-pressed="true"><span class="switch-number">01</span><img src="assets/miawrouter-mascot-router.png" width="38" height="38" alt=""><span><strong>MiawRouter</strong><small>The connection layer</small></span><span class="switch-arrow" aria-hidden="true">↗</span></button>
+        <button class="product-switch" type="button" data-product="code" aria-pressed="false"><span class="switch-number">02</span><img src="assets/miawcode-icon.svg" width="38" height="38" alt=""><span><strong>MiawCode</strong><small>The terminal, amplified</small></span><span class="switch-arrow" aria-hidden="true">↗</span></button>
+        <button class="product-switch" type="button" data-product="ide" aria-pressed="false"><span class="switch-number">03</span><img src="assets/miawcode-ide-icon.svg" width="38" height="38" alt=""><span><strong>MiawCode IDE</strong><small>Your workspace, rethought</small></span><span class="switch-arrow" aria-hidden="true">↗</span></button>
+      </div>
+      <div class="hero-bottom"><span>BUILT FOR THE WAY YOU THINK.</span><a href="#products">Explore the stack <span aria-hidden="true">↓</span></a><span>SCROLL TO UNPACK</span></div>
+    </section>
+
+    <section class="products section-pad" id="products" aria-labelledby="product-title">
+      <div class="section-top"><p class="eyebrow">01 / THE TOOLCHAIN</p><span class="section-aside">Different jobs. Shared language.</span></div>
+      <div class="product-detail" aria-live="polite" aria-atomic="true">
+        <article id="detail-router" class="detail is-active" data-detail="router">
+          <div class="detail-copy"><p class="kicker">MIAWROUTER / GATEWAY</p><h2 id="product-title">Many models.<br><em>One front door.</em></h2><p>A local OpenAI-compatible gateway that brings provider routing, account pools and streaming into one endpoint. Connect your editor or agent. Keep your choice of model.</p><div class="detail-actions"><a class="text-link" href="router/index.html">Full documentation <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/skutanjir/miawrouter">Source on GitHub <span aria-hidden="true">↗</span></a></div></div>
+          <div class="spec-sheet"><div class="spec-head"><img src="assets/miawrouter-mascot-router.png" width="56" height="56" alt=""><span>ROUTING ENGINE<br><strong>npm / 1.2.3</strong></span><span class="tag">AVAILABLE</span></div><dl><div><dt>Interface</dt><dd>OpenAI-compatible /v1</dd></div><div><dt>Default port</dt><dd>21128</dd></div><div><dt>Provider reference</dt><dd>146 adapters</dd></div><div><dt>Streaming</dt><dd>SSE normalization</dd></div><div><dt>Resilience</dt><dd>Account pools + failover</dd></div><div><dt>Local runtimes</dt><dd>llama.cpp · vLLM</dd></div></dl><p class="spec-note">Requests still go to the upstream provider you choose. Local gateway does not mean offline inference.</p></div>
+        </article>
+        <article id="detail-code" class="detail" data-detail="code">
+          <div class="detail-copy"><p class="kicker">MIAWCODE / TERMINAL AGENT</p><h2>Less switching.<br><em>More shipping.</em></h2><p>A coding agent in your terminal, built with Rust, Go and Bun. Read a codebase, edit with anchored changes, run commands and recover through checkpoints.</p><div class="detail-actions"><a class="text-link" href="code/index.html">Full documentation <span aria-hidden="true">↗</span></a><a class="text-link" href="https://www.npmjs.com/package/miawcode">Get the package <span aria-hidden="true">↗</span></a></div></div>
+          <div class="spec-sheet"><div class="spec-head"><img src="assets/miawcode-icon.svg" width="56" height="56" alt=""><span>TERMINAL ENGINE<br><strong>npm / 0.1.3</strong></span><span class="tag">AVAILABLE</span></div><dl><div><dt>Execution</dt><dd>Native PTY</dd></div><div><dt>File changes</dt><dd>Anchored edits</dd></div><div><dt>Recovery</dt><dd>Checkpoints · undo · redo</dd></div><div><dt>Extensions</dt><dd>Skills · MCP · plugins</dd></div><div><dt>Planning</dt><dd>/plan</dd></div><div><dt>Code review</dt><dd>/review</dd></div></dl><p class="spec-note">Provider credentials and repository trust are configured locally. Review permissions before running commands.</p></div>
+        </article>
+        <article id="detail-ide" class="detail" data-detail="ide">
+          <div class="detail-copy"><p class="kicker">MIAWCODE IDE / DESKTOP WORKSPACE</p><h2>Stay inside<br><em>your flow.</em></h2><p>A Code - OSS workspace with agent assistance in the editor. Plan before a change, build with tools, and review with evidence. Familiar editor foundations, a new way to work.</p><div class="detail-actions"><a class="text-link" href="ide/index.html">Development notes <span aria-hidden="true">↗</span></a><a class="text-link" href="#modes">Explore the modes <span aria-hidden="true">↓</span></a></div></div>
+          <div class="spec-sheet"><div class="spec-head"><img src="assets/miawcode-ide-icon.svg" width="56" height="56" alt=""><span>WORKSPACE ENGINE<br><strong>Code - OSS foundation</strong></span><span class="tag tag-dev">IN DEVELOPMENT</span></div><dl><div><dt>Agent modes</dt><dd>Agent · Plan · Review</dd></div><div><dt>Editor services</dt><dd>Languages · debug · terminal</dd></div><div><dt>Gateway setting</dt><dd>21188 default</dd></div><div><dt>For MiawRouter</dt><dd>Change to 21128</dd></div><div><dt>Distribution</dt><dd>No public installer yet</dd></div><div><dt>Availability</dt><dd>In development</dd></div></dl><p class="spec-note">Not a download announcement. Development status and configuration details remain visible in the product notes.</p></div>
+        </article>
+      </div>
+      <div class="product-index" role="group" aria-label="Product details"><button type="button" data-product="router" aria-pressed="true">01 / Router</button><button type="button" data-product="code" aria-pressed="false">02 / Code</button><button type="button" data-product="ide" aria-pressed="false">03 / IDE</button></div>
+    </section>
+
+    <section class="modes section-pad" id="modes" aria-labelledby="modes-title">
+      <div class="section-top"><p class="eyebrow">02 / INTENT → ACTION</p><span class="section-aside">MiawCode IDE / three working modes</span></div>
+      <div class="modes-layout"><div><h2 id="modes-title">Think it through.<br>Then <em>make it real.</em></h2><p class="section-description">Not every task needs a file change. Pick the right kind of help, with clear boundaries.</p><div class="mode-controls" role="group" aria-label="Choose a working mode"><button data-mode="plan" type="button" aria-pressed="true"><span>01</span>Plan <small>Understand first</small></button><button data-mode="agent" type="button" aria-pressed="false"><span>02</span>Agent <small>Build and verify</small></button><button data-mode="review" type="button" aria-pressed="false"><span>03</span>Review <small>Evidence, not guesses</small></button></div></div>
+      <div class="editor" aria-live="polite" aria-atomic="true"><div class="editor-bar"><span class="editor-dots" aria-hidden="true">● ● ●</span><span>MIAWCODE / WORKSPACE</span><span class="editor-badge">ILLUSTRATIVE DEMO</span></div><article class="mode-panel is-active" data-mode-panel="plan"><p class="terminal-muted">$ task: fix the parser edge case</p><h3>Read first. Change nothing.</h3><p>Read-only investigation produces a plan with real files, assumptions, risks and verification steps.</p><div class="editor-file">.miawcode/plan.md</div><pre><code><span class="terminal-green"># Parser recovery</span>
+
+01  Read parser and its callers
+02  Trace null input through tests
+03  Specify guard + regression check
+
+<span class="terminal-muted">Files     src/parser.ts · test/parser
+Verify    npm test
+Next      Approve &amp; run in Agent mode</span></code></pre></article><article class="mode-panel" data-mode-panel="agent"><p class="terminal-muted">$ task: execute the approved plan</p><h3>Make the change. Prove it works.</h3><p>Agent edits files, runs tools under your approval policy and checks the result before reporting.</p><div class="editor-file">Task progress</div><pre><code><span class="terminal-green">[done]</span> Read parser and test cases
+<span class="terminal-green">[done]</span> Add null-input guard
+<span class="terminal-green">[done]</span> Add regression check
+
+<span class="terminal-muted">$ npm test</span>
+<span class="terminal-green">PASS</span> parser handles empty input
+
+Ready for your review.</code></pre></article><article class="mode-panel" data-mode-panel="review"><p class="terminal-muted">$ task: review the pending diff</p><h3>Find the bug. Show the evidence.</h3><p>Review never modifies files. Findings carry severity, file, line, evidence and a concrete fix.</p><div class="editor-file">Verified finding / example</div><pre><code><span class="terminal-orange">HIGH</span>  src/auth.ts:42
+
+Token remains valid at exact expiry.
+Check uses &lt; instead of &lt;=.
+
+<span class="terminal-green">FIX</span>  Compare with &lt;=.
+     Add exact-expiry regression test.
+
+<span class="terminal-muted">Confirmed bugs stay separate
+from suspicions and unchecked paths.</span></code></pre></article><div class="editor-bottom"><span class="status-dot"></span> YOUR WORKSPACE. YOUR APPROVAL.</div></div></div>
+    </section>
+
+    <section class="connection section-pad" aria-labelledby="connection-title"><div class="section-top"><p class="eyebrow">03 / CONNECT THE DOTS</p><span class="section-aside">OpenAI-compatible by design</span></div><h2 id="connection-title">One endpoint.<br><em>Your whole workflow.</em></h2><div class="route"><div><span>CLIENTS</span><strong>MiawCode / IDE</strong><small>Or your preferred tool</small></div><span class="route-line" aria-hidden="true"></span><div class="route-core"><div class="route-orbit" aria-hidden="true"><i></i><i></i><i></i></div><span>LOCAL GATEWAY</span><strong>MiawRouter</strong><code>127.0.0.1:21128/v1</code></div><span class="route-line" aria-hidden="true"></span><div><span>INFERENCE</span><strong>Your chosen models</strong><small>Cloud APIs or local runtimes</small></div></div><p class="connection-note">Connecting the IDE? Its bundled gateway setting defaults to <code>21188</code>. Change it to <code>21128</code> for MiawRouter.</p></section>
+
+    <section class="install section-pad" id="install" aria-labelledby="install-title"><div class="section-top"><p class="eyebrow">04 / MAKE SOMETHING</p><span class="section-aside">Start with one tool. Connect the rest later.</span></div><div class="install-heading"><h2 id="install-title">Your next idea<br>starts <em>locally.</em></h2><div class="brand-object" aria-hidden="true"><div class="brand-orbit"></div><img src="assets/miawlabs-icon.svg" alt="" width="120" height="120" loading="lazy"><span>ML / LOCAL FIRST</span></div></div><div class="install-grid"><article><div class="install-label"><span>01 / ROUTE</span><span>npm / 1.2.3</span></div><h3>Start the gateway.</h3><div class="command"><pre><code>npm install -g miawrouter
+miawrouter</code></pre><button type="button" data-copy="npm install -g miawrouter&#10;miawrouter" aria-label="Copy MiawRouter install commands" hidden>Copy</button></div><a class="text-link" href="router/index.html">Setup and docs ↗</a></article><article><div class="install-label"><span>02 / BUILD</span><span>npm / 0.1.3</span></div><h3>Meet your terminal agent.</h3><div class="command"><pre><code>npm install -g miawcode@0.1.3
+miawcode</code></pre><button type="button" data-copy="npm install -g miawcode@0.1.3&#10;miawcode" aria-label="Copy MiawCode install commands" hidden>Copy</button></div><a class="text-link" href="code/index.html">Setup and docs ↗</a></article></div><p class="install-note">MiawCode IDE is still in development. <a href="ide/index.html">Read the status</a>; no public installer is available yet.</p><p id="copy-status" class="copy-status" role="status"></p></section>
+  </main>
+  <footer><a class="wordmark" href="./">miaw<span class="wordmark-light">labs</span></a><small class="copyright">&copy; 2026 MiawLabs. All rights reserved.</small><a href="https://github.com/skutanjir/miawrouter">Built in the open ↗</a></footer>
+  <noscript><style>.product-index,.product-selector,.mode-controls{display:none}.detail,.mode-panel{display:block!important;margin-bottom:3rem}</style></noscript>
+</body>
+</html>

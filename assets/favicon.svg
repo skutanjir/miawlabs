@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <rect width="48" height="48" rx="10" fill="#060911"/>
+  <rect x="1" y="1" width="46" height="46" rx="9" stroke="#168BFF" stroke-opacity="0.35" stroke-width="2"/>
+  <!-- Antennas / Cat ears -->
+  <path d="M14 13L10 7M34 13L38 7" stroke="#168BFF" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Router chassis -->
+  <rect x="7" y="14" width="34" height="22" rx="4" fill="#0F1626" stroke="#168BFF" stroke-width="2"/>
+  <!-- Ports / LEDs -->
+  <circle cx="14" cy="25" r="2.5" fill="#168BFF"/>
+  <circle cx="21" cy="25" r="2" fill="#168BFF" fill-opacity="0.7"/>
+  <circle cx="27" cy="25" r="2" fill="#10B981"/>
+  <circle cx="34" cy="25" r="2" fill="#8B5CF6"/>
+  <!-- Interconnect trace -->
+  <path d="M18 10C22 8.5 26 8.5 30 10" stroke="#168BFF" stroke-width="2" stroke-linecap="round"/>
+  <path d="M12 30H36" stroke="#1E2B48" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

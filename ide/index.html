@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MiawCode IDE: Desktop Workspace</title>
+  <meta name="description" content="Code - OSS desktop workspace in development with 30 bundled subagent profiles and MiawRouter integration.">
+  <link rel="icon" type="image/svg+xml" href="../assets/miawcode-ide-icon.svg">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="product-ide">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="../index.html" class="brand-link" aria-label="MiawLabs home">
+        <img src="../assets/miawcode-ide-icon.svg" alt="" class="brand-badge-img" width="34" height="34">
+        <span>MiawCode <strong>IDE</strong><span class="brand-tagline">Desktop workspace</span></span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="../index.html" class="nav-link">Overview</a>
+        <a href="../router/index.html" class="nav-link">MiawRouter</a>
+        <a href="../code/index.html" class="nav-link">MiawCode</a>
+        <a href="index.html" class="nav-link active" aria-current="page">MiawCode IDE</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="page-main">
+    <section class="page-hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow">In Development / Code - OSS workspace</div>
+        <h1 id="hero-title">Bring agents into <em>the editor.</em></h1>
+        <p class="hero-lead">MiawCode IDE is a desktop workspace built on Code - OSS with 30 bundled Subagent profiles and an internal MiawRouter provider.</p>
+        <p class="hero-note">There is no public repository, binary release, installer, or download link yet.</p>
+        <div class="hero-actions">
+          <a href="#subagents" class="btn btn-primary">Inspect 30 Subagents</a>
+          <a href="#status" class="btn">Read development status</a>
+          <a href="../router/index.html" class="btn">Configure MiawRouter</a>
+        </div>
+      </div>
+
+      <div class="hero-scene" aria-hidden="true">
+        <div class="scene-panel scene-panel-left scene-panel-ide">
+          <img class="panel-icon" src="../assets/miawcode-ide-icon.svg" alt="">
+          <strong>Editor shell</strong>
+          <small>Code - OSS core</small>
+        </div>
+        <div class="scene-panel scene-panel-right scene-panel-code">
+          <img class="panel-icon" src="../assets/miawcode-icon.svg" alt="">
+          <strong>Subagent registry</strong>
+          <small>30 profiles loaded</small>
+        </div>
+        <div class="scene-panel scene-panel-bottom scene-panel-router">
+          <img class="panel-icon" src="../assets/miawrouter-mascot-router.png" alt="">
+          <strong>Gateway extension</strong>
+          <small>default :21188</small>
+        </div>
+        <div class="scene-orbit"></div>
+        <div class="scene-dock"></div>
+        <img class="scene-mark" src="../assets/miawcode-ide-icon.svg" alt="">
+      </div>
+    </section>
+
+    <section class="section-shell" id="status" aria-labelledby="status-title">
+      <div class="section-heading">
+        <div class="eyebrow">Development status</div>
+        <h2 id="status-title">A working direction, not a public release.</h2>
+      </div>
+      <div class="notice-panel">
+        MiawCode IDE is in active development. No public package or installer exists. The current gallery configuration also needs Open VSX before third-party distribution.
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card lead-feature">
+          <div class="product-label">Code - OSS foundation</div>
+          <h3>Editor services stay familiar</h3>
+          <p>The workspace keeps language servers, debug adapters, terminals, keymaps, and extension surfaces from the Code - OSS base.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Gallery caveat</h3>
+          <p>The development build currently points to Visual Studio Marketplace. A public fork must use a licensed alternative such as Open VSX.</p>
+        </article>
+        <article class="feature-card">
+          <h3>MiawRouter provider</h3>
+          <p>The bundled extension registers a <code>miawrouter</code> model provider and currently defaults to <code>127.0.0.1:21188</code>.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Workspace definitions</h3>
+          <p>Agent contracts, prompts, instructions, chat modes, and hooks load from project-level <code>.miawcode</code> directories.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-shell" id="subagents" aria-labelledby="subagents-title">
+      <div class="section-heading">
+        <div class="eyebrow">Subagent registry</div>
+        <h2 id="subagents-title">Thirty profiles with explicit responsibilities.</h2>
+        <p>Each <code>*.agent.md</code> file defines a focused role and limits its available tools in YAML frontmatter.</p>
+      </div>
+      <ul class="registry-list" aria-label="Bundled MiawCode IDE subagents">
+        <li>architect</li>
+        <li>code-reviewer</li>
+        <li>debugger</li>
+        <li>security-auditor</li>
+        <li>test-engineer</li>
+        <li>performance-optimizer</li>
+        <li>database-specialist</li>
+        <li>api-designer</li>
+        <li>devops-infra</li>
+        <li>frontend-craftsman</li>
+        <li>accessibility-a11y</li>
+        <li>type-checker</li>
+        <li>git-workflow</li>
+        <li>data-engineer</li>
+        <li>graphql-expert</li>
+        <li>auth-security</li>
+        <li>internationalization-i18n</li>
+        <li>mobile-developer</li>
+        <li>microservices-planner</li>
+        <li>release-manager</li>
+        <li>ui-animator</li>
+        <li>migration-assistant</li>
+        <li>documentation-writer</li>
+        <li>dependency-auditor</li>
+        <li>incident-responder</li>
+        <li>cloud-architect</li>
+        <li>compliance-checker</li>
+        <li>metrics-engineer</li>
+        <li>prompt-engineer</li>
+        <li>chaos-tester</li>
+      </ul>
+    </section>
+
+    <section class="section-shell" aria-labelledby="workspace-title">
+      <div class="section-heading">
+        <div class="eyebrow">Workspace layout</div>
+        <h2 id="workspace-title">Project configuration stays with the project.</h2>
+      </div>
+      <div class="code-panel" tabindex="0" role="region" aria-label="MiawCode IDE workspace layout">
+        <span class="code-label">.miawcode directory</span>
+        <pre><code>.miawcode/
+├── agents/         # 30 agent definitions
+├── prompts/        # prompt templates
+├── instructions/   # repository guidance
+├── chatmodes/      # chat profiles
+└── hooks/          # lifecycle hooks</code></pre>
+      </div>
+    </section>
+
+    <section class="section-shell" aria-labelledby="specs-title">
+      <div class="section-heading">
+        <div class="eyebrow">Specifications</div>
+        <h2 id="specs-title">Current development boundaries.</h2>
+      </div>
+      <div class="fact-table">
+        <div class="fact-row"><span class="fact-key">Foundation</span><span class="fact-val">Code - OSS</span></div>
+        <div class="fact-row"><span class="fact-key">Status</span><span class="fact-val">In Development, without a public release or installer</span></div>
+        <div class="fact-row"><span class="fact-key">Subagents</span><span class="fact-val">Exactly 30 profiles in <code>.miawcode/agents</code></span></div>
+        <div class="fact-row"><span class="fact-key">Gateway default</span><span class="fact-val"><code>http://127.0.0.1:21188</code>, while MiawRouter defaults to <code>21128</code></span></div>
+        <div class="fact-row"><span class="fact-key">State directory</span><span class="fact-val"><code>~/.miawcode-ide</code></span></div>
+        <div class="fact-row"><span class="fact-key">License</span><span class="fact-val">MIT</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div><strong>MiawCode IDE</strong><br>Desktop workspace in development</div>
+      <div class="footer-links">
+        <a href="../index.html">MiawLabs</a>
+        <a href="../router/index.html">MiawRouter</a>
+        <a href="../code/index.html">MiawCode</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

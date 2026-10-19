@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MiawRouter: Local AI Gateway</title>
+  <meta name="description" content="Local OpenAI-compatible gateway with provider routing, failover pools, cache layers, and runtime connectors.">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="product-router">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="../index.html" class="brand-link" aria-label="MiawLabs home">
+        <img src="../assets/miawrouter-mascot-router.png" alt="" class="brand-badge-img" width="34" height="34">
+        <span>Miaw<strong>Router</strong><span class="brand-tagline">Local AI gateway</span></span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="../index.html" class="nav-link">Overview</a>
+        <a href="index.html" class="nav-link active" aria-current="page">MiawRouter</a>
+        <a href="../code/index.html" class="nav-link">MiawCode</a>
+        <a href="../ide/index.html" class="nav-link">MiawCode IDE</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="page-main">
+    <section class="page-hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow">MiawRouter 1.2.3 / Node.js 20.9+</div>
+        <h1 id="hero-title">One endpoint for <em>every model route.</em></h1>
+        <p class="hero-lead">MiawRouter runs locally and presents one OpenAI-compatible endpoint to editors, agents, and applications.</p>
+        <p class="hero-note">It handles provider translation, multi-account failover, SSE normalization, cache layers, MITM interception, and local model connectors.</p>
+        <div class="hero-actions">
+          <a href="#installation" class="btn btn-primary">Install MiawRouter</a>
+          <a href="https://github.com/skutanjir/miawrouter" class="btn" target="_blank" rel="noopener noreferrer">Open repository</a>
+          <a href="https://www.npmjs.com/package/miawrouter" class="btn" target="_blank" rel="noopener noreferrer">View npm package</a>
+        </div>
+      </div>
+
+      <div class="hero-scene" aria-hidden="true">
+        <div class="scene-panel scene-panel-left scene-panel-router">
+          <img class="panel-icon" src="../assets/miawrouter-mascot-router.png" alt="">
+          <strong>Gateway</strong>
+          <small>127.0.0.1:21128</small>
+        </div>
+        <div class="scene-panel scene-panel-right scene-panel-router">
+          <img class="panel-icon" src="../assets/miawrouter-mascot-router.png" alt="">
+          <strong>Provider pool</strong>
+          <small>round-robin failover</small>
+        </div>
+        <div class="scene-panel scene-panel-bottom scene-panel-code">
+          <img class="panel-icon" src="../assets/miawcode-icon.svg" alt="">
+          <strong>SSE stream</strong>
+          <small>normalized output</small>
+        </div>
+        <div class="scene-orbit"></div>
+        <div class="scene-dock"></div>
+        <img class="scene-mascot" src="../assets/miawrouter-mascot-router.png" alt="">
+      </div>
+    </section>
+
+    <section class="section-shell" id="installation" aria-labelledby="installation-title">
+      <div class="section-heading">
+        <div class="eyebrow">Installation</div>
+        <h2 id="installation-title">Run the gateway locally.</h2>
+        <p>The default dashboard and API endpoint are available after the service starts.</p>
+      </div>
+      <div class="content-grid">
+        <div class="code-panel" tabindex="0" role="region" aria-label="MiawRouter installation commands">
+          <span class="code-label">Install and start</span>
+          <pre><code>npm install -g miawrouter
+miawrouter
+
+# OpenAI-compatible base URL
+http://127.0.0.1:21128/v1</code></pre>
+        </div>
+        <div class="fact-table">
+          <div class="fact-row"><span class="fact-key">API base</span><span class="fact-val"><code>http://127.0.0.1:21128/v1</code></span></div>
+          <div class="fact-row"><span class="fact-key">Dashboard</span><span class="fact-val"><code>http://127.0.0.1:21128/dashboard</code></span></div>
+          <div class="fact-row"><span class="fact-key">Config</span><span class="fact-val"><code>~/.miawrouter</code></span></div>
+          <div class="fact-row"><span class="fact-key">Cache</span><span class="fact-val">L0 prompt, L1 exact, L2 semantic, L3 disk</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell" aria-labelledby="capabilities-title">
+      <div class="section-heading">
+        <div class="eyebrow">Routing layer</div>
+        <h2 id="capabilities-title">The gateway work stays in one process.</h2>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card lead-feature">
+          <div class="product-label">Provider adapters</div>
+          <h3>One request shape across configured backends</h3>
+          <p>The current MiawLabs reference tracks 146 adapters for cloud APIs, subscription-backed sessions, and local runtimes.</p>
+        </article>
+        <article class="feature-card">
+          <h3>SSE normalization</h3>
+          <p>Provider-specific streams are translated into a consistent OpenAI-compatible response.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Account pools</h3>
+          <p>Round-robin selection and cooldown handling move traffic away from unavailable accounts.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Four cache layers</h3>
+          <p>L0 through L3 reduce repeated prompt work while keeping fail-open behavior.</p>
+        </article>
+        <article class="feature-card">
+          <h3>MITM interception</h3>
+          <p>Compatible developer tools can route requests through the local gateway without changing their normal workflow.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Local runtimes</h3>
+          <p>Connectors cover llama.cpp, vLLM, Whisper, Kokoro, and other self-hosted services.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-shell" aria-labelledby="dashboard-title">
+      <div class="section-heading">
+        <div class="eyebrow">Administrative surface</div>
+        <h2 id="dashboard-title">Inspect routes, usage, and runtime state.</h2>
+      </div>
+      <figure class="figure-container">
+        <img src="../assets/miawrouter-banner.png" alt="MiawRouter gateway architecture and dashboard concepts" class="figure-img" width="2560" height="1280">
+        <figcaption class="figure-caption">The web dashboard covers providers, pools, usage, cache, logs, model discovery, privacy, and runtime health.</figcaption>
+      </figure>
+    </section>
+
+    <section class="section-shell" aria-labelledby="request-title">
+      <div class="section-heading">
+        <div class="eyebrow">Client request</div>
+        <h2 id="request-title">Keep the standard OpenAI shape.</h2>
+      </div>
+      <div class="code-panel" tabindex="0" role="region" aria-label="MiawRouter curl request">
+        <span class="code-label">POST /v1/chat/completions</span>
+        <pre><code>curl http://127.0.0.1:21128/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer local" \
+  -d '{
+    "model": "your-model-route",
+    "messages": [{"role": "user", "content": "Hello"}]
+  }'</code></pre>
+      </div>
+    </section>
+
+    <section class="section-shell" aria-labelledby="specs-title">
+      <div class="section-heading">
+        <div class="eyebrow">Specifications</div>
+        <h2 id="specs-title">Local by default.</h2>
+      </div>
+      <div class="fact-table">
+        <div class="fact-row"><span class="fact-key">Version</span><span class="fact-val">1.2.3</span></div>
+        <div class="fact-row"><span class="fact-key">Runtime</span><span class="fact-val">Node.js 20.9 or newer</span></div>
+        <div class="fact-row"><span class="fact-key">Default port</span><span class="fact-val"><code>21128</code></span></div>
+        <div class="fact-row"><span class="fact-key">Interfaces</span><span class="fact-val">OpenAI-compatible API, dashboard, CLI, and provider adapters</span></div>
+        <div class="fact-row"><span class="fact-key">Storage</span><span class="fact-val">Local configuration and SQLite data under <code>~/.miawrouter</code></span></div>
+        <div class="fact-row"><span class="fact-key">License</span><span class="fact-val">MIT</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div><strong>MiawRouter</strong><br>Local AI gateway</div>
+      <div class="footer-links">
+        <a href="../index.html">MiawLabs</a>
+        <a href="../code/index.html">MiawCode</a>
+        <a href="../ide/index.html">MiawCode IDE</a>
+        <a href="https://github.com/skutanjir/miawrouter" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
