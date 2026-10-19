@@ -36,3 +36,7 @@ Live curl verification output is in seo/live-verification.md. It describes the d
 - No lastmod values invented; sitemap omits optional lastmod.
 - npm account-maintainer metadata and release publication remain outside this website branch.
 - README remains project documentation instead of being replaced with an agent task specification.
+
+## Vercel redirect follow-up
+
+Live response identifies Vercel. Added vercel.json permanent redirects for /about and /about/index.html to /about/, plus product index aliases to directory canonicals. Local config tests pass; live redirects remain unverified until deployment.

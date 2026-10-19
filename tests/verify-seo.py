@@ -54,3 +54,9 @@ assert 'href="/about/"' in (ROOT / 'index.html').read_text(encoding='utf-8')
 assert 'application/ld+json' in (ROOT / 'index.html').read_text(encoding='utf-8')
 assert (ROOT / 'promotion/SKIPPED.md').read_text().strip() == 'Phase 2 not requested.'
 print('PASS: five canonical pages, unique metadata, OG, dimensions, image budget, schema JSON, sitemap, About link, no Chinese; promotion skipped')
+
+redirects = json.loads((ROOT / 'vercel.json').read_text())['redirects']
+for source, destination in [('/about/index.html', '/about/'), ('/about', '/about/'), ('/router/index.html', '/router/'), ('/code/index.html', '/code/'), ('/ide/index.html', '/ide/')]:
+    assert any(rule['source'] == source and rule['destination'] == destination and rule['permanent'] for rule in redirects)
+assert not any(rule['source'] == '/about/' for rule in redirects), 'canonical URL must not redirect to itself'
+print('PASS: Vercel permanent alias redirects, no canonical self-loop')
